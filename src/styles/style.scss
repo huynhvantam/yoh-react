@@ -1,0 +1,111 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+body {
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.text-display {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.text-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.text-serif {
+  font-family: 'Noto Serif', serif;
+}
+
+.text-mont {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar-button:vertical:start:increment,
+  &::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #ccc;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.main-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+
+
+  @screen sm {
+    width: 94%;
+    max-width: none;
+  }
+
+  @screen md {
+    width: 100%;
+    @apply max-w-screen-md;
+  }
+
+  @screen lg {
+    width: 100%;
+    @apply max-w-screen-md;
+  }
+
+  @screen xl {
+    width: 100%;
+    @apply max-w-screen-md;
+  }
+
+  @screen 2xl {
+    width: 100%;
+    @apply max-w-screen-md;
+  }
+}
+
+.no-focus:not(.btn) {
+  outline: none;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.tippy-box.no-padding .tippy-content {
+  padding: 0 !important;
+}
+
+.shadow-right-bottom {
+  box-shadow: 5px 5px 19px -5px #0C0C0C3B;
+}
+
+.shadow-first-item {
+
+  box-shadow: 0px 20px 13px 0px #00000003;
+
+}
+}

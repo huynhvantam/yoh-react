@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <h1>heello</h1>
-      <Link href="/new">New</Link>
+      <h1>Home</h1>
+      <Link href="/vay-von-VPBank">Vay vốn VPBANK</Link>
     </>
   );
 }
