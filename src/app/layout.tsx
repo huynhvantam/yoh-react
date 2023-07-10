@@ -1,7 +1,7 @@
 // import './globals.css'
 import "../styles/style.scss";
 import { Inter } from "next/font/google";
-
+import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -16,7 +16,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Head>
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=0"
+        />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <body>{children}</body>
     </html>
   );
 }
